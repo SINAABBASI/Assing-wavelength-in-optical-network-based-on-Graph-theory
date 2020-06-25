@@ -1,0 +1,46 @@
+Husristic K:0
+maxChannel : 72
+maxDistance: 1210
+
+Husristic K:1
+maxChannel : 64
+maxDistance: 1336
+
+Husristic K:2
+maxChannel : 55
+maxDistance: 1556
+
+Husristic K:3
+maxChannel : 51
+maxDistance: 1736
+
+Husristic K:4
+maxChannel : 49
+maxDistance: 1579
+
+Husristic K:5
+maxChannel : 49
+maxDistance: 1647
+
+Husristic K:6
+maxChannel : 48
+maxDistance: 1638
+
+Husristic K:7
+maxChannel : 48
+maxDistance: 1736
+
+Husristic K:8
+maxChannel : 48
+maxDistance: 1770
+
+Husristic K:9
+maxChannel : 48
+maxDistance: 1688
+
+Husristic K:10
+maxChannel : 47
+maxDistance: 1723
+
+Total request: 246
+Time taken: 0.05851s
