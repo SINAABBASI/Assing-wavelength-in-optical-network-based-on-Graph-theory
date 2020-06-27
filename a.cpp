@@ -42,7 +42,7 @@ int maxDistance=0,maxChannel=0,channelNum=0;
 
 
 long double huristicFun(int edgeId){
-	return pow(1.1,1.0*(countEdge[edgeId]+1.0*k*max(0,countEdge[edgeId])-40)/10);
+	return pow(1.1,1.0*(countEdge[edgeId]+1.0*k*max(0,countEdge[edgeId]-10))/10);
 	// return 1;
 }
 
@@ -54,7 +54,7 @@ void printPath(int st,int cur){
 		maxChannel=max(maxChannel,countEdge[parId[cur]]);
 	}
 	///Show path
-	cout<<cur<<" ";
+	// cout<<cur<<" ";
 }
 
 void dik(int a,int b){
@@ -81,11 +81,11 @@ void dik(int a,int b){
 	maxDistance=max(dis[a][b],maxDistance);
 	channelNum=0;
 	//showPath
-	cout<<"Path "<<a<<"->"<<b<< ":";
+	// cout<<"Path "<<a<<"->"<<b<< ":";
 	printPath(a,b);
-	cout<<endl;
-	cout<<"Dis: "<<dis[a][b]<<right<<setw(10)<<" channelInUse: "<<channelNum<<endl;
-	cout<<endl;
+	// cout<<endl;
+	// cout<<"Dis: "<<dis[a][b]<<right<<setw(10)<<" channelInUse: "<<channelNum<<endl;
+	// cout<<endl;
 }
 
 
@@ -118,12 +118,13 @@ int main() {
 		}
 	}
 	sort(req.begin(), req.end(),cmp);
+	reverse(req.begin(), req.end());
 	// for(auto i : req){
 	// 	cerr<<i.fr.fr<<" "<<i.fr.sc<<" "<<dis[i.fr.fr][i.fr.sc]<<endl;
 	// }
-	k=5;
+	k=0;
 
-	for(;k<=5;k++){
+	for(;k<=10;k++){
 		memset(countEdge,0,sizeof countEdge);
 		maxDistance=0,maxChannel=0,channelNum=0;
 		for(auto i : req){

@@ -7,15 +7,15 @@ maxChannel : 30
 maxDistance: 5316
 
 Husristic K:2
-maxChannel : 30
+maxChannel : 31
 maxDistance: 5316
 
 Husristic K:3
-maxChannel : 30
+maxChannel : 31
 maxDistance: 5316
 
 Husristic K:4
-maxChannel : 30
+maxChannel : 31
 maxDistance: 5316
 
 Husristic K:5
@@ -23,24 +23,24 @@ maxChannel : 30
 maxDistance: 5316
 
 Husristic K:6
-maxChannel : 30
+maxChannel : 29
 maxDistance: 5316
 
 Husristic K:7
-maxChannel : 30
+maxChannel : 29
 maxDistance: 5316
 
 Husristic K:8
-maxChannel : 30
+maxChannel : 29
 maxDistance: 5316
 
 Husristic K:9
-maxChannel : 30
+maxChannel : 28
 maxDistance: 5316
 
 Husristic K:10
-maxChannel : 30
+maxChannel : 28
 maxDistance: 5316
 
 Total request: 121
-Time taken: 0.04212s
+Time taken: 0.04250s

@@ -1,46 +1,46 @@
 Husristic K:0
-maxChannel : 53
-maxDistance: 5352
+maxChannel : 60
+maxDistance: 5316
 
 Husristic K:1
-maxChannel : 46
-maxDistance: 5926
+maxChannel : 61
+maxDistance: 5316
 
 Husristic K:2
-maxChannel : 40
-maxDistance: 5926
+maxChannel : 61
+maxDistance: 5316
 
 Husristic K:3
-maxChannel : 38
-maxDistance: 6940
+maxChannel : 58
+maxDistance: 5316
 
 Husristic K:4
-maxChannel : 37
-maxDistance: 6940
+maxChannel : 56
+maxDistance: 5316
 
 Husristic K:5
-maxChannel : 36
-maxDistance: 7984
+maxChannel : 55
+maxDistance: 5316
 
 Husristic K:6
-maxChannel : 35
-maxDistance: 7984
+maxChannel : 54
+maxDistance: 5316
 
 Husristic K:7
-maxChannel : 34
-maxDistance: 7984
+maxChannel : 52
+maxDistance: 11254
 
 Husristic K:8
-maxChannel : 34
-maxDistance: 7984
+maxChannel : 49
+maxDistance: 11254
 
 Husristic K:9
-maxChannel : 34
-maxDistance: 7984
+maxChannel : 48
+maxDistance: 10816
 
 Husristic K:10
-maxChannel : 35
-maxDistance: 8046
+maxChannel : 46
+maxDistance: 11254
 
 Total request: 242
-Time taken: 0.05509s
+Time taken: 0.05971s
