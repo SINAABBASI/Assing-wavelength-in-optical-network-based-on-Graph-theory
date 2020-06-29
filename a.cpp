@@ -34,6 +34,7 @@ void dik(int a){
 }
 
 int countEdge[2*MAX],parId[2*MAX],par[MAX];
+bool seen[2*MAX][MAX];
 long double dynamicDis[MAX];
 priority_queue<pair<long double,int> > pqq;
 
@@ -46,17 +47,18 @@ long double huristicFun(int edgeId){
 	// return 1;
 }
 
+vector<int> temp;
 void printPath(int st,int cur){
 	if(cur!=st){
 		printPath(st,par[cur]);
 		countEdge[parId[cur]]++;
-		channelNum=max(channelNum,countEdge[parId[cur]]);
+		// channelNum=max(channelNum,countEdge[parId[cur]]);
+		temp.push_back(parId[cur]);
 		maxChannel=max(maxChannel,countEdge[parId[cur]]);
 	}
 	///Show path
-	// cout<<cur<<" ";
+	cout<<cur<<" ";
 }
-
 void dik(int a,int b){
 	for(int i = 0; i < n ; i++)dynamicDis[i]=inf,dis[a][i]=inf, par[i]=i;
 	for(int i = 0; i < m ; i++)parId[i]=-1;
@@ -79,13 +81,28 @@ void dik(int a,int b){
 		}
 	}
 	maxDistance=max(dis[a][b],maxDistance);
-	channelNum=0;
 	//showPath
-	// cout<<"Path "<<a<<"->"<<b<< ":";
+	temp.clear();
+	cout<<"Path "<<a<<"->"<<b<< ":";
 	printPath(a,b);
-	// cout<<endl;
-	// cout<<"Dis: "<<dis[a][b]<<right<<setw(10)<<" channelInUse: "<<channelNum<<endl;
-	// cout<<endl;
+	channelNum=0;
+	for(int i = 1; i < 111; i++){
+		bool f=0;
+		for(auto j : temp){
+			if(seen[j][i]){
+				f=1;
+				break;
+			}
+		}
+		if(f==0){
+			channelNum=i;
+			for(auto j : temp)seen[j][i]=1;
+			break;
+		}
+	}
+	cout<<endl;
+	cout<<"Dis: "<<dis[a][b]<<right<<setw(10)<<" channelInUse: "<<channelNum<<endl;
+	cout<<endl;
 }
 
 
@@ -122,11 +139,12 @@ int main() {
 	// for(auto i : req){
 	// 	cerr<<i.fr.fr<<" "<<i.fr.sc<<" "<<dis[i.fr.fr][i.fr.sc]<<endl;
 	// }
-	k=0;
+	k=5;
 
-	for(;k<=10;k++){
+	for(;k<=5;k++){
 		memset(countEdge,0,sizeof countEdge);
-		maxDistance=0,maxChannel=0,channelNum=0;
+		maxDistance=0,maxChannel=0;
+		memset(seen,0,sizeof seen);
 		for(auto i : req){
 			for(int j = 0; j < i.sc ;j++){
 				// cout<<i.fr.fr<<i.fr.sc<<endl;
